@@ -69,8 +69,8 @@ header img {
 }
 
 .hamburger-menu {
-  width: 40px;
-  height: 30px;
+  width: 2.5rem;
+  height: 1.875rem;
   position: relative;
   cursor: pointer;
   z-index: 2;
@@ -78,7 +78,7 @@ header img {
 
 .ham-bar {
   width: 100%;
-  height: 3px;
+  height: 0.1875rem;
   background-color: var(--color-text-dark-primary);
   position: absolute;
   top: 50%;
@@ -112,9 +112,9 @@ header img {
 .nav-links {
   position: fixed;
   top: 0;
-  right: -256px;
+  right: -16rem;
   min-height: 100vh;
-  width: 256px;
+  width: 16rem;
   padding: 144px 0 0 24px;
   background-color: var(--color-primary-bg);
   color: var(--color-text-dark-primary);
@@ -142,8 +142,8 @@ header img {
 }
 
 .nav-links li {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 }
 
 .nav-links li+li {
@@ -161,8 +161,8 @@ header img {
 
 .hero h1 {
   font-weight: 800;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   margin-top: 24px;
   margin-bottom: 16px;
   color: var(--color-text-dark-primary);
@@ -170,8 +170,8 @@ header img {
 
 .hero p {
   font-weight: 400;
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
   margin-bottom: 24px;
   color: var(--color-text-dark-secondary);
 }
@@ -180,12 +180,12 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 185px;
-  height: 48px;
+  width: 11.5625rem;
+  height: 3rem;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 4.375px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.2734rem;
   text-transform: uppercase;
   background-color: var(--color-accent-btn-bg);
   transition: background-color .5s ease-in;
@@ -205,22 +205,22 @@ header img {
   padding-bottom: 0;
 }
 
-.new-articles article + article {
+.new-articles article+article {
   border-top: 1px solid var(--color-text-dark-secondary);
 }
 
 .new-articles h2 {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   margin-bottom: 4px;
   color: var(--color-accent);
 }
 
 .new-articles h3 {
   font-weight: 800;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   margin-bottom: 8px;
   color: var(--color-text-light-primary);
   transition: color .3s ease-in-out;
@@ -228,8 +228,8 @@ header img {
 
 .new-articles p {
   font-weight: 400;
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
   color: var(--color-text-light-secondary);
 }
 
@@ -238,7 +238,7 @@ header img {
   align-items: center;
 }
 
-.top-articles article + article {
+.top-articles article+article {
   margin-top: 32px;
 }
 
@@ -253,24 +253,24 @@ header img {
 
 .top-articles h2 {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 2rem;
   margin-bottom: 12px;
   color: var(--color-text-light-secondary);
 }
 
 .top-articles h3 {
   font-weight: 800;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   margin-bottom: 9px;
   color: var(--color-text-dark-primary);
 }
 
 .top-articles p {
   font-weight: 400;
-  font-size: 15px;
-  line-height: 26px;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
   color: var(--color-text-dark-secondary);
 }
 
@@ -279,6 +279,7 @@ header img {
 }
 
 @media (hover: hover) {
+
   .nav-links li a:hover,
   .top-articles a:hover h3 {
     color: var(--color-accent-btn-bg);
@@ -339,12 +340,12 @@ header img {
 
   .nav-links li {
     font-weight: 400;
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
     color: var(--color-text-dark-secondary);
   }
 
-  .nav-links li + li {
+  .nav-links li+li {
     margin-top: 0;
     margin-left: 40px;
   }
@@ -369,14 +370,14 @@ header img {
   }
 
   .hero h1 {
-    font-size: 56px;
-    line-height: 56px;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
     margin: 0;
   }
 
   .hero h1,
   .hero-text {
-    flex-basis: 350px;
+    flex-basis: 21.875rem;
   }
 
   .hero p {
@@ -384,15 +385,15 @@ header img {
   }
 
   .new-articles {
-    width: 350px;
-    height: 511px;
+    width: 21.875rem;
+    height: 31.9375rem;
     margin-bottom: 0;
     padding: 31.5px 24px;
   }
 
-  .new-articles h2{
-    font-size: 40px;
-    line-height: 40px;
+  .new-articles h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 
   .new-articles article {
@@ -410,7 +411,7 @@ header img {
     flex-basis: 33.333%;
   }
 
-  .top-articles article + article {
+  .top-articles article+article {
     margin-top: 0;
   }
 
