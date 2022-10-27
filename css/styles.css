@@ -135,7 +135,6 @@ header img {
   opacity: 0;
   background-color: hsla(240, 100%, 5%, 0.45);
   transition: opacity .8s;
-  z-index: -1;
 }
 
 .overlay.active {
