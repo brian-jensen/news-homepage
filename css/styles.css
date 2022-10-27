@@ -1,5 +1,12 @@
 :root {
   --font-primary: 'Inter', sans-serif;
+  --color-primary-bg: hsl(36, 100%, 99%);
+  --color-text-dark-primary: hsl(240, 100%, 5.1%);
+  --color-text-dark-secondary: hsl(235.7, 13%, 42.4%);
+  --color-text-light-primary: hsl(36, 100%, 99%);
+  --color-text-light-secondary: hsl(233.3, 8.4%, 79%);
+  --color-accent: hsl(35, 77.4%, 61.8%);
+  --color-accent-btn-bg: hsl(4.5, 85.1%, 63.1%);
 }
 
 * {
@@ -8,7 +15,10 @@
   padding: 0;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   border: none;
   box-shadow: none;
   outline: none;
@@ -25,11 +35,235 @@ a:active {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
   font-family: var(--font-primary);
+  background-color: var(--color-primary-bg);
 }
 
+
+.wrapper {
+  padding: 28px 16px 80px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+header img {
+  height: 28px;
+  width: 45px;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.ham-bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-text-dark-primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform .6s, opacity .8s, top .6s;
+}
+
+.bar-top {
+  top: 25%;
+}
+
+.bar-bottom {
+  top: 75%;
+}
+
+.hamburger-menu.active .bar-top {
+  transform: translate(-50%, -50%) rotate(-315deg);
+  top: 50%;
+}
+
+.hamburger-menu.active .bar-mid {
+  opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom {
+  transform: translate(-50%, -50%) rotate(-225deg);
+  top: 50%;
+}
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -256px;
+  min-height: 100vh;
+  width: 256px;
+  padding: 144px 0 0 24px;
+  background-color: var(--color-primary-bg);
+  color: var(--color-text-dark-primary);
+  transition: right .8s;
+}
+
+.nav-links.active {
+  right: 0;
+  z-index: 2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: hsla(240, 100%, 5%, 0.45);
+  transition: opacity .8s;
+  z-index: -1;
+}
+
+.overlay.active {
+  opacity: 1;
+}
+
+.nav-links li {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.nav-links li+li {
+  margin-top: 24px;
+}
+
+.hero {
+  margin-bottom: 64px;
+  color: var(--color-text-light-primary);
+}
+
+.hero h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  color: var(--color-text-dark-primary);
+}
+
+.hero p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 24px;
+  color: var(--color-text-dark-secondary);
+}
+
+.hero a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 185px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4.375px;
+  text-transform: uppercase;
+  background-color: var(--color-accent-btn-bg);
+}
+
+.new-articles {
+  background-color: var(--color-text-dark-primary);
+  margin-bottom: 64px;
+  padding: 24px 20.5px;
+}
+
+.new-articles article {
+  padding: 31px 0;
+}
+
+.new-articles article:last-of-type {
+  padding-bottom: 0;
+}
+
+.new-articles article + article {
+  border-top: 1px solid var(--color-text-dark-secondary);
+}
+
+.new-articles h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 4px;
+  color: var(--color-accent);
+}
+
+.new-articles h3 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  color: var(--color-text-light-primary);
+}
+
+.new-articles p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--color-text-light-secondary);
+}
+
+.top-articles article {
+  display: flex;
+  align-items: center;
+}
+
+.top-articles article + article {
+  margin-top: 32px;
+}
+
+.top-articles img {
+  width: 100px;
+  height: 127px;
+}
+
+.top-articles .text {
+  margin-left: 24px;
+}
+
+.top-articles h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 12px;
+  color: var(--color-text-light-secondary);
+}
+
+.top-articles h3 {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 9px;
+  color: var(--color-text-dark-primary);
+}
+
+.top-articles p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--color-text-dark-secondary);
+}
