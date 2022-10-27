@@ -151,6 +151,10 @@ header img {
   margin-top: 24px;
 }
 
+.nav-links li a {
+  transition: color .3s ease-in-out;
+}
+
 .hero {
   margin-bottom: 64px;
   color: var(--color-text-light-primary);
@@ -185,6 +189,7 @@ header img {
   letter-spacing: 4.375px;
   text-transform: uppercase;
   background-color: var(--color-accent-btn-bg);
+  transition: background-color .5s ease-in;
 }
 
 .new-articles {
@@ -219,6 +224,7 @@ header img {
   line-height: 24px;
   margin-bottom: 8px;
   color: var(--color-text-light-primary);
+  transition: color .3s ease-in-out;
 }
 
 .new-articles p {
@@ -269,6 +275,24 @@ header img {
   color: var(--color-text-dark-secondary);
 }
 
+.top-articles a:hover h3 {
+  transition: color .3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .nav-links li a:hover,
+  .top-articles a:hover h3 {
+    color: var(--color-accent-btn-bg);
+  }
+
+  .new-articles a:hover h3 {
+    color: var(--color-accent);
+  }
+
+  .hero a:hover {
+    background-color: var(--color-text-dark-primary);
+  }
+}
 
 @media (min-width: 31.25em) {
   .hero img {
