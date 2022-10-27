@@ -10,6 +10,7 @@
 }
 
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -266,4 +267,134 @@ header img {
   font-size: 15px;
   line-height: 26px;
   color: var(--color-text-dark-secondary);
+}
+
+
+@media (min-width: 31.25em) {
+  .hero img {
+    display: none;
+  }
+
+  .hero picture {
+    display: flex;
+    height: 300px;
+    background: url('../assets/images/image-web-3-desktop.jpg') no-repeat center center/cover;
+  }
+}
+
+
+@media (min-width: 69.375em) {
+  .wrapper {
+    padding: 48px 0;
+    max-width: 69.375rem;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 55px;
+  }
+
+  header img {
+    width: 64px;
+    height: 40px;
+  }
+
+  .hamburger-menu,
+  .overlay {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    display: flex;
+    align-items: center;
+    width: initial;
+    min-height: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav-links li {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--color-text-dark-secondary);
+  }
+
+  .nav-links li + li {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 45.625rem;
+    margin-bottom: 71px;
+  }
+
+  .hero picture {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+    line-height: 56px;
+    margin: 0;
+  }
+
+  .hero h1,
+  .hero-text {
+    flex-basis: 350px;
+  }
+
+  .hero p {
+    margin-bottom: 29px;
+  }
+
+  .new-articles {
+    width: 350px;
+    height: 511px;
+    margin-bottom: 0;
+    padding: 31.5px 24px;
+  }
+
+  .new-articles h2{
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .new-articles article {
+    padding: 29px 0;
+  }
+
+  .top-articles {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / span 2;
+    gap: 30px;
+  }
+
+  .top-articles article {
+    flex-basis: 33.333%;
+  }
+
+  .top-articles article + article {
+    margin-top: 0;
+  }
+
+}
+
+@media (min-width: 90em) {
+  .wrapper {
+    padding: 90px 0 130px;
+  }
 }
